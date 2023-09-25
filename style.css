@@ -1,0 +1,135 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: monospace, Geneva, Tahoma, sans-serif;
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-image: url(./welcome-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:100%;
+}
+nav{
+    width: 100%;
+    height:50px;
+    background-color: rgb(36, 33, 37);
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 25px;
+}
+nav ul{
+    display: flex;
+    
+}
+nav .brand{
+    font-size: 23px;
+    font-weight: 900;
+
+}
+nav ul li{
+    list-style:none;
+    padding:0px 8px;
+
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight:500;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    background-color: rgb(242, 234, 234);
+    color:rgb(25, 25, 26);
+    transition: 0.5s ease;
+}
+
+nav .btn i{
+    color:rgb(43, 39, 39);
+    font-size:35px;
+    cursor:pointer;
+    display :none;
+
+}
+.main{
+    width:100%;
+    display:flex;
+}
+.content{
+    margin-top: 15%;
+    width:100%;   
+}
+.content h1{
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+.content h3{
+    font-size: 15px;
+    margin-bottom: 3%;
+    
+}
+.content p{
+    
+    text-align: center;
+
+}
+nav #click{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    body{
+        object-fit: contain;
+        background-position:fixed;
+    }
+    nav .btn i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top:50px;
+        left:-50%;
+        width: 30%;
+        height: 100vh;
+        background-color: rgb(25, 24, 26);
+        display: block;
+        text-align: center;
+        transition: 0.6s ease;
+    }
+    nav ul li{
+        margin:35px 0px;
+    }
+    nav ul li a{
+         font-size: 20px;
+         display: block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+        color:rgb(183, 199, 202);
+        background:none;
+    }
+    #click:checked~ul{
+        left:0%;
+    }
+    #click:checked~.btn i:before{
+        content:"\f00d";
+}
+.content{
+    margin-top: 15%;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    padding:50px;
+   
+
+}
+
+}
